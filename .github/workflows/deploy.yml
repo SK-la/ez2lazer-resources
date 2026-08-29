@@ -37,10 +37,10 @@ jobs:
         id: artifactsPath
         run: echo "nuget_artifacts=${{ github.workspace }}/artifacts" >> "$GITHUB_OUTPUT"
 
-      - name: Install .NET 8.0.x
+      - name: Install .NET 10.0.x
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
 
       - name: Pack
         run: dotnet pack -c Release osu.Game.Resources /p:Version=${{ steps.version.outputs.value }} /p:GenerateDocumentationFile=true /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ${{ steps.artifactsPath.outputs.nuget_artifacts }}
