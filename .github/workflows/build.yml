@@ -1,5 +1,14 @@
 name: Build
-on: [push, pull_request]
+
+on:
+  # PR 只跑 pull_request；master 直推仍跑。忽略一切 tag，避免上游/误推 tag 触发 CI。
+  pull_request:
+  push:
+    branches:
+      - master
+    tags-ignore:
+      - '**'
+  workflow_dispatch:
 
 jobs:
   build:
