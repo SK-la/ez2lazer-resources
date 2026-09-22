@@ -30,7 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Resolves references to LocalisableString. -->
-    <PackageReference Include="ez2lazer.Framework" Version="2026.829.0-ez2lazer">
+    <PackageReference Include="ez2lazer.Framework" Version="2026.921.0-ez2lazer">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
