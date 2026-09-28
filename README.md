@@ -19,7 +19,7 @@ Some fonts and assets have **separate** licences (or remain all-rights-reserved)
 
 ### Third-party backgrounds (`Textures/Backgrounds/bg1`–`bg5`)
 
-Third-party illustrations (mostly Pixiv; some printed fanbook / paper scans). **Not** under this repository’s CC-BY-NC; no redistribution licence is claimed. Sources are listed in [`Textures/Backgrounds/CREDITS.md`](osu.Game.Resources/Textures/Backgrounds/CREDITS.md). Rights holders who want these removed: email the address on the [SK-la](https://github.com/SK-la) GitHub profile, or open an issue on [SK-la/osu-resources](https://github.com/SK-la/osu-resources/issues) — they will be taken down or replaced promptly.
+Third-party illustrations (mostly Pixiv; some printed fanbook / paper scans). **Not** under this repository’s CC-BY-NC; no redistribution licence is claimed. Sources are listed in [`Textures/Backgrounds/CREDITS.md`](osu.Game.Resources/Textures/Backgrounds/CREDITS.md). Rights holders who want these removed: email the address on the [SK-la](https://github.com/SK-la) GitHub profile, or open an issue on [SK-la/ez2lazer-resources](https://github.com/SK-la/ez2lazer-resources/issues) — they will be taken down or replaced promptly.
 
 ### Branding / trademarks
 

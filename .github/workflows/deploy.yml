@@ -63,12 +63,12 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
-          name: osu-resources
+          name: ez2lazer-resources
           path: |
             ${{ steps.artifactsPath.outputs.nuget_artifacts }}/*.nupkg
             ${{ steps.artifactsPath.outputs.nuget_artifacts }}/*.snupkg
 
-      # NuGet 可信发布：SK-la/osu-resources + deploy.yml（无需长期 NUGET_API_KEY）
+      # NuGet 可信发布：SK-la/ez2lazer-resources + deploy.yml（无需长期 NUGET_API_KEY）
       - name: NuGet login (Trusted Publishing / OIDC)
         uses: NuGet/login@v1
         id: nuget_login
