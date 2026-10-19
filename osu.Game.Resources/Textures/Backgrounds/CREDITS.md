@@ -7,9 +7,7 @@
 |------|-----------------|
 | `bg1.png` | Nengoro (ネんごろぅ) — [pixiv #108790341](https://www.pixiv.net/artworks/108790341)（《ブルーアワー》） |
 | `bg2.png` | Nengoro (ネんごろぅ) — [pixiv #110238202](https://www.pixiv.net/artworks/110238202)（《free-fallen》） |
-| `bg3.png` | 飴村 — [pixiv #33654076](https://www.pixiv.net/artworks/33654076)（《コズミック・ダイバー》） |
-| `bg4.jpg` | とろっち — [pixiv #31251883](https://www.pixiv.net/artworks/31251883)（《２０ＸＸ年プラネタリウム宇宙の旅》） |
-| `bg5.png` | 纸质同人扫描，近似 *Noise Pollution Vol.5 \<CODE GEASS\> Lelouch of the Rebellion FAN-BOOK No.36*（サークル CREAYUS / 嵐月；角色权：Sunrise 等相关权利方） |
+| `bg3.png` | Nengoro (ネんごろぅ) — [pixiv #115826246](https://www.pixiv.net/artworks/115826246)（《コズミック・ダイバー》） |
 
 ### 权利人联系 / Takedown
 
