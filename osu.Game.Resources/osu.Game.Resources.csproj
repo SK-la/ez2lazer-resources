@@ -28,6 +28,50 @@
     <EmbeddedResource Include="Textures\**\*" />
     <EmbeddedResource Include="Tracks\**\*" />
   </ItemGroup>
+  <ItemGroup Label="Unused web localisation">
+    <!--
+      The game never references these Web namespaces (verified against the osu repository: zero usages of the
+      corresponding *Strings classes). The .resx files stay in the repository to keep upstream merges conflict-free
+      and the *Strings classes stay compiled, but their translations are excluded so satellite assemblies shrink.
+    -->
+    <EmbeddedResource Remove="Localisation\Web\Admin*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Api*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Bbcode*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\BeatmapDiscussionPosts*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\BeatmapsetDiscussionVotes*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\BeatmapsetEvents*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\BeatmapsetWatches*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\BeatmapTags*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\ClientVerifications*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Community*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Contest*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Errors*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Forum*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\GroupHistory*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\LegacyApiKey*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\LegacyIrcKey*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Livestreams*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Mail*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Models*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Multiplayer*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Oauth*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\PasswordReset*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Paypal\Errors*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\QuickSearch*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\ScoreTokens*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Sessions*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Store*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\SupporterTag*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Teams*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Tournament*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\UserCoverPresets*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\UserTotp*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\Validation*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\ModelValidation\Fulfillments*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\ModelValidation\Payments*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\ModelValidation\Token*.resx" />
+    <EmbeddedResource Remove="Localisation\Web\ModelValidation\Store\Product*.resx" />
+  </ItemGroup>
   <ItemGroup>
     <!-- Resolves references to LocalisableString. -->
     <PackageReference Include="ez2lazer.Framework" Version="2026.925.0-ez2lazer">
