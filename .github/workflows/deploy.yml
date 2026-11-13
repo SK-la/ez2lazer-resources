@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'NuGet 包版本（与 tag 名一致，例如 2026.524.0-ez2lazer）'
+        description: '发布 tag（例如 2026.524.0-ez2lazer；NuGet 版本会去掉 -ez2lazer）'
         required: true
         type: string
 
@@ -43,10 +43,13 @@ jobs:
         id: version
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "value=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
+            value="${{ inputs.version }}"
           else
-            echo "value=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+            value="${GITHUB_REF#refs/tags/}"
           fi
+          echo "value=$value" >> "$GITHUB_OUTPUT"
+          # NuGet 版本去掉 Ez 标记，发布为稳定版；tag 名保持不变。
+          echo "package=${value%-ez2lazer}" >> "$GITHUB_OUTPUT"
 
       - name: Set artifacts directory
         id: artifactsPath
@@ -58,7 +61,7 @@ jobs:
           dotnet-version: "10.0.x"
 
       - name: Pack
-        run: dotnet pack -c Release osu.Game.Resources /p:Version=${{ steps.version.outputs.value }} /p:GenerateDocumentationFile=true /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ${{ steps.artifactsPath.outputs.nuget_artifacts }}
+        run: dotnet pack -c Release osu.Game.Resources /p:Version=${{ steps.version.outputs.package }} /p:GenerateDocumentationFile=true /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg -o ${{ steps.artifactsPath.outputs.nuget_artifacts }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
@@ -78,7 +81,7 @@ jobs:
       - name: Publish packages to nuget.org
         run: |
           set -euo pipefail
-          VERSION="${{ steps.version.outputs.value }}"
+          VERSION="${{ steps.version.outputs.package }}"
           LOG="${RUNNER_TEMP}/nuget-push.log"
           : > "$LOG"
           FAILED=0
